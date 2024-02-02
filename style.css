@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+button {
+    color: white;
+    background-color: #c51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.mario-e-luigi {
+    height: 500px;
+}
+
+.caixa-principal {
+    width: 50%;
+    color: white;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    
+    }
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+    }
+
+body {
+    height: 100vh;
+}
+
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px;
+    height: 90vh;
+    
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+
+}
+.header img {
+    height: 60px;
+}
+
+.header a {
+    color: white;
+    font-size: 20px;
+    font: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.formulario{
+    background-color: white;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+    
+   
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+textarea {
+    height: 100px;
+    width: 270px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(6,4,36,0.9668242296918768) 0%, rgba(14,13,33,0.8519782913165266) 100%, rgba(0,212,255,1) 100%);
+    transition: visibility 1s ease-in-out;
+}
+
+
+
+/*max -> Valor menor que "N"px, aplica o css do MEDIA
+  min -> Valor maior que "N"px, aplica o css do MEDIA
+ */
+@media (max-width: 1100px) {
+    
+    p {
+        display: none; /*sumir o parágrafo*/
+    }
+
+    .caixa-mae{
+        flex-direction: column; /* direção que os itens vão ficar*/
+        padding: 10px;
+    }
+
+    .caixa-principal{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mario-e-luigi {
+        width: 80vw; /*largura*/
+        height: auto; /*altura*/
+    }
+
+    .logo-mario {
+        width: 80vw; /*largura*/
+        height: auto; /*altura*/
+    }
+
+    .header img {
+        display: none; 
+    
+    }
+
+
+}
